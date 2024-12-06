@@ -35,24 +35,48 @@ body {
     font-size: 46px;
     border-bottom: 1px solid #e5e7eb;
 }
+
+.sub {
+    font-size: 46px;
+}
 .play-area {
     display: flex;
     justify-content: center;
 }
+
 .button-container {
-    
     border-right: 0.5px solid #e5e7eb;
     border-bottom: 1px solid #e5e7eb;
     display: flex;
-    height: 10em;
-    width: 10em;
-
+    justify-content: space-between;
+    align-items: center;
+    height: 30em;
+    width: 40em;
 }
 
 .computer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-left: 0.5px solid #e5e7eb;
     border-bottom: 1px solid #e5e7eb;
-    height: 10em;
-    width: 10em;
+    height: 30em;
+    width: 40em;
+}
 
+.computer-container p {
+    font-size: 28px;
+}
+
+#rps {
+    background-color: #1F2937;
+    color: #e5e7eb;
+    font-size: 28px;
+    height: fit-content;
+    width: 20%;
+    text-align: center;
+}
+
+.last {
+    margin-right: 1em;
 }

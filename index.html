@@ -12,12 +12,23 @@
             ROCK PAPER SCISSORS!
         </div>
         <div class="play-area">
-            <div class="button-container">
-                <br><br><br><br>
+            <form class="button-container roboto-regular">
+                <button type="submit" id="rps" value="Rock" onclick="getHumanChoice(event)">
+                    Rock
+                </button>
+                <button type="submit" id="rps" value="Paper" onclick="getHumanChoice(event)" >
+                    Paper
+                </button>
+                <button type="submit" class="last" id="rps" value="Scissors" onclick="getHumanChoice(event)">
+                    Scissors
+                </button>
+            </form>
+            <div class="computer-container roboto-regular">
+                <p id="computer-choice"></p>
             </div>
-            <div class="computer-container">
-                
-            </div>
+        </div>
+        <div class="sub roboto-bold">
+            <h1 id="result"></h1>
         </div>
     </div>
     <script src="script.js"></script>
