@@ -13,8 +13,7 @@ function getComputerChoice() {
 
 function getHumanChoice(event) {
         event.preventDefault();
-        let choice = event.target.value;
-        startGame(choice);
+        startGame(event.target.value);
 }
 
 function startGame(choice) {
@@ -22,29 +21,25 @@ function startGame(choice) {
     let result
     document.getElementById("computer-choice").innerHTML = computerChoice;
 
-    if (choice == computerChoice) {
-        result = "DRAW!";
-    } else if (choice === "Rock") {
-        if (computerChoice === "Paper") {
-            result = "LOSS!";
-        }
-        if (computerChoice === "Scissors") {
-            result = "WIN!"
-        }
-    } else if (choice === "Paper") {
-        if (computerChoice === "Scissors") {
-            result = "LOSS!"
-        }
-        if (computerChoice === "Rock") {
-            result = "WIN!"
-        }
-    } else if (choice === "Scissors") {
-        if (computerChoice === "Rock") {
-            result = "LOSS!"
-        }
-        if (computerChoice === "Paper") {
-            result = "WIN!"
-        }
+    switch (choice) {
+        case "Rock":
+            result = 
+                (computerChoice === "Paper") ? "LOSS!" :
+                (computerChoice === "Scissors") ? "WIN!":
+                "DRAW!";
+            break;
+        case "Paper":
+            result = 
+                (computerChoice === "Scissors") ? "LOSS!" :
+                (computerChoice === "Rock") ? "WIN!":
+                "DRAW!";
+            break;
+        case "Scissors":
+            result = 
+                (computerChoice == "Rock") ? "LOSS!" :
+                (computerChoice == "Paper") ? "WIN!":
+                "DRAW!";
+            break;
     } 
 
     document.getElementById("result").innerHTML = result;
