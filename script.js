@@ -1,14 +1,10 @@
 
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3)
-    switch (num) {
-        case 0:
-            return 'Rock'
-        case 1:
-            return 'Paper'
-        case 2: 
-            return 'Scissors'
-    }   
+
+    return  (num == 0) ? "Rock":
+            (num == 1) ? "Paper":
+            "Scissors";
 }
 
 function getHumanChoice(event) {
