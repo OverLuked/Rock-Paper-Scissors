@@ -39,5 +39,4 @@ function startGame(choice) {
     } 
 
     document.getElementById("result").innerHTML = result;
-
 }
