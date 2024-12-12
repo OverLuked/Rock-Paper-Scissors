@@ -7,12 +7,7 @@ function getComputerChoice() {
             "Scissors";
 }
 
-function getHumanChoice(event) {
-        event.preventDefault();
-        startGame(event.target.value);
-}
-
-function startGame(choice) {
+function gameLogic(choice) {
     let computerChoice = getComputerChoice();
     let result
     document.getElementById("computer-choice").innerHTML = computerChoice;
@@ -40,3 +35,24 @@ function startGame(choice) {
 
     document.getElementById("result").innerHTML = result;
 }
+
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
+
+
+// LISTENERS
+rock.addEventListener('click', function(event) {
+    event.preventDefault();
+    gameLogic(event.target.value);
+});
+
+paper.addEventListener('click', function(event) {
+    event.preventDefault();
+    gameLogic(event.target.value);
+});
+
+scissors.addEventListener('click', function(event) {
+    event.preventDefault();
+    gameLogic(event.target.value);
+});
